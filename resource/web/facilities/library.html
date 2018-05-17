@@ -1,0 +1,77 @@
+{% extends '/facilities.html' %}
+  {%block header%} <h1 style="color: #00bebe; text-align: center;"  class="animated zoomIn"><strong>Library</strong></h1>{%endblock%}
+{%block rightside%}
+<script type="text/javascript">
+	    $(document).ready(function(){
+      $('.slider').slider();
+    });
+</script>
+    <div class="row">
+        <div  class="col s12 m9">
+        	     <div class="slider">
+    <ul class="slides">
+      <li>
+        <img  src="/images/l1.jpg"> <!-- random image -->
+      </li>
+      <li>
+        <img  src="/images/l2.jpg"> <!-- random image -->
+      </li>
+            <li>
+        <img  src="/images/l3.jpg"> <!-- random image -->
+
+      </li>
+            <li>
+        <img  src="/images/l4.jpg"> <!-- random image -->
+      </li>
+            <li>
+        <img  src="/images/l5.jpg"> <!-- random image -->
+      </li>
+    </ul>
+  </div>
+          <div class="card black">
+            <div class="card-content white-text">
+              <span class="card-title"><h1 style="color: #00bebe;"><strong>About Library</strong></h1></span>
+              <p>The expansive College Library is housed in the center of the campus in an exclusive building designed for the purpose. Plans are underway to connect the library building with the main college building through a upper floor corridor. The library comprises four sections : the Main Library, individual Departmental Libraries (Sciences), the Periodicals and the Text Book Sections. Together, all the sections of our library display a rich collection of more than 1,35,000 titles and about 98 periodicals published in India and abroad.
+The Library has study spaces with a mix of quite individual and group-study areas. The Library provides a book-bank facility too for lending text books to needy & deserving students for a period of one year at a stretch. Internet facility is now available for students inside the library premises itself. Searching/referencing of titles is now almost totally computerized. Complete computerization of the Library is almost nearing completion.</p>
+            </div>
+          </div>
+         <br><br><br><br><br><br><br>
+        </div>
+         <style type="text/css">
+          .collapsible-header{
+            background: black;
+          }
+        </style>
+        <div class="col s12 m6 offset-m4" style="margin-bottom: 10%;" >
+             
+  <ul class="collapsible popout" data-collapsible="accordion" style="color: #00bebe;;">
+  	    <li>
+      <div class="collapsible-header"><i class="material-icons">directions_run</i>Important Note:</div>
+      <div class="collapsible-body"><span>Dear Users, National Digital Library is an initiative by HRD ministry. It is a huge collection of learning resources( 68 lakhs books) from primary to PG level. You can use it free of charge.<br><br>
+
+To register go to<br>
+
+1.https://ndl.iitkgp.ac.in<br>
+2.On the right hand side of the home page you will find the registration space.<br>
+3.Fill the required information. Your E-mail id will be your user id.<br>
+4.Create a password<br>
+5.Press the register now button.<br>
+6.You will receive a verification mail on your mail. In that mail click on Click Here button for confirmation.<br>
+<h5><strong>This is an amazing resource. Make it a point to get yourself registered.</strong></h5></span></div>
+    </li>
+    <li>
+      <div  class="collapsible-header"><i class=" material-icons">book</i>Library Staff</div>
+      <div class="collapsible-body">
+        {% for event in events %}
+        <span><i class="material-icons">account_circle</i>{{ event.teacherName|e }}<br><br></span>
+          {% endfor %}
+      </div>
+    </li>
+  </ul>
+        
+       
+  </div>
+      </div>
+
+
+{%endblock%}

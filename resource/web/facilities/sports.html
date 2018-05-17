@@ -1,0 +1,59 @@
+{% extends '/facilities.html' %}
+  {%block header%} <h1 style="color: #00bebe; text-align: center;"  class="animated zoomIn"><strong>Sports</strong></h1>{%endblock%}
+{%block rightside%}
+<script type="text/javascript">
+	  $(document).ready(function(){
+      $('.slider').slider();
+    });
+        
+</script>
+<div class="row">
+	<div class="col s12 m9">
+		 <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="/images/sport1.jpg">  
+      </li>
+      <li>
+          <img src="/images/sport2.jpg"> 
+      </li>
+      <li>
+          <img src="/images/sport3.jpg">
+      </li>
+      <li>
+          <img  src="/images/sport4.jpg">
+      </li>
+    </ul>
+  </div>
+          <div class="card black">
+            <div class="card-content white-text">
+              <span class="card-title"><h3 style="color: #00bebe;"><strong>About Sports</strong></h3></span>
+              <p>The College has facilities for both outdoor and indoor games. The College has a huge sports ground and a basketball court between the college and the hostel premises. Our sports complex is one of the few colleges in the country to posses an indoor badminton court and a state-of-the-art indoor shooting range. Our student have won University, State and National level championships in pistol Shooting, Archery(W), Water Polo, Basketball, Badminton, Cricket etc. The performance of its team in Lawn Tennis, Swimming, Table-Tennis, etc. has been equally commendable. In Chess, Polo and other individual events too, the College has performed well. The College won the Chancellor's Trophy in 2003-2004, 2004-2005 and for last four academic sessions from 2011 to 2015 for overall excellence in sports. Sport facilities are made available to all students under the programme : Games For All. All students are expected to participate. Existing facilities are continuously upgrade and improved.</p><br>
+              <h6><strong>(Your suggestions for further improvement may be directed to Dr. M. P. Sharma, Convener, Sports Committee.)</strong></h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+<div class="row">
+      {% for event in events %}
+        <div class="col s12 m3">
+  <div class="card">
+    <div class="card-image ">
+      <img class="materialboxed" data-caption="Sport Image" src="/utils/{{ event.sportImage|e }}">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4"><p>Sports Name </p>{{ event.sportName|e }}<i class="material-icons right">more_vert</i></span>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4"><p>Sports Name </p>{{ event.sportName|e }}<i class="material-icons right">close</i></span>
+      <p>{{ event.sportDescription|e }}.</p>
+    </div>
+  </div>
+        </div>
+           {% endfor %}
+      </div>
+
+{%endblock%}

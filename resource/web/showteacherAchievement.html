@@ -1,0 +1,26 @@
+{% extends 'home.html' %}
+{%block main%}
+{% for event in events %}
+<div class="animated zoomIn">
+  <div class="row" " >
+   <div class="col s12 m8 offset-m2 l6 offset-l3"  >
+        <div class="card-panel   lighten-5 z-depth-1" style="background:black;">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <div class="materialboxed">
+              <img  src="/utils/{{ event.teacherAchievementimg|e }}" class="circle responsive-img"> 
+              </div>
+            </div>
+            <div class="col s10">
+              <span class="black-text">
+                <p style=" color: #00bebe;"><strong  >Teacher Name : </strong>{{ event.teacherName|e }}</p>
+                <p  style=" color: #00bebe;" ><strong >Achievement Description : </strong></p>
+                <p  style=" color: #00bebe;">{{ event.achievementDescription|e }}</p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div></div>
+{% endfor %}
+{%endblock%}

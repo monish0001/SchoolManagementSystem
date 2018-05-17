@@ -1,0 +1,22 @@
+{% extends '/dashboard/dash.html' %}
+{%block leftside%}
+{%block header%} <h3 style="color: #00bebe; text-align: center;"  class="animated zoomIn"><strong>Manage Academics</strong></h3>{%endblock%}
+<div class="row">
+ <div  class="col s12 m3  ">
+        <div class="card #ede7f6 deep-purple black" style="height:auto; width: auto;">
+            <div class="tooltipped" data-position="top" data-delay="50" data-tooltip="OPERATION">
+            <div class="card-content white-text">
+              <span class="card-title" style="  color: #00bebe;">OPERATIONS</span>
+              <ul>
+              	   <a href="/adminPanel"><li><i class="fa fa-tv"></i>Dashboard</li></a>
+                  <li><a href="/adminPanel/academices/syllabi">Syllabi</a></li>
+                  <li><a href="/adminPanel/academices/timetable">Time Table</a></li>
+                  <li><a href="/adminPanel/academices/prizeandawards">Prize and Awards</a></li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+        </div>
+{%endblock%}
+{%block rightside%}
+{%endblock%}

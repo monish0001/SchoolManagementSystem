@@ -1,0 +1,17 @@
+{%extends 'home.html'%}
+{%block main%}
+<div class="row" align="center" >
+  <div class="card black darken-1"><div class="animated zoomIn">
+    <div class="card-content white-text" >
+      <h1  style="color: #00bebe;"><strong>NOTICE BOARD</strong></h1><h3>&nbsp;</h3>
+      {% for event in events %}
+      <h3><strong> Subject</strong></h3>{{ event. notificationTag|e }}<p>&nbsp;</p>
+      <h3><strong>Notification Issue Date  </strong></h3>{{ event.notificationDate|e }}<p>&nbsp;</p>
+      <img  src="/utils/{{ event.notificationImage|e }}"  align="center" width="300x;" data-caption="{{ event.notificationTag|e }} " class="materialboxed"></img>
+      <h3><strong> Descreption </strong></h3>{{ event.notificationDescription|e }}<p>&nbsp;</p>
+      {% endfor %} 
+      </div>
+    </div>
+  </div>
+</div>
+{%endblock%}

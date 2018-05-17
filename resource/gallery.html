@@ -1,0 +1,103 @@
+{% extends 'home.html' %}
+
+{%block main%} 
+
+
+ <div class="carousel carousel-slider center" data-indicators="true">
+    <div class="carousel-fixed-item center">
+      
+    </div>
+    <div class="carousel-item black white-text" href="#one!">
+      <img src="/images/moni5.jpg">
+    </div>
+    <div class="carousel-item amber white-text" href="#two!">
+      <img src="/images/moni2.jpg">
+    </div>
+    <div class="carousel-item green white-text" href="#three!">
+      <img src="/images/moni3.jpg">
+    </div>
+    <div class="carousel-item blue white-text" href="#four!">
+        <img src="/images/moni4.jpg">
+    </div>
+    <div class="carousel-item grey white-text" href="#four!">
+       <img src="/images/moni1.jpg">
+    </div>
+    <div class="carousel-item blue white-text" href="#four!">
+       <img src="/images/moni6.jpg">
+    </div>
+    <div class="carousel-item yellow white-text" href="#four!">
+       <img src="/images/moni7.jpg">
+    </div>
+    <div class="carousel-item green white-text" href="#four!">
+       <img src="/images/moni8.jpeg">
+    </div>
+    <div class="carousel-item red white-text"  href="#four!">
+    <img src="/images/moni9.jpeg">
+      
+    </div>
+
+  </div><br><br>
+
+ <div class="row " style="margin-left: 1%">
+        
+         <div class="col s12 m3">
+         <img  class="materialboxed" data-caption="A picture of students after winning in a competition." width="280" src="/images/shasha1.jpg">
+        </div>
+         <div class="col s12 m3">
+          <img class="materialboxed" data-caption="A picture of students enjoying Music Show." width="280" src="/images/shasha4.jpg">
+        </div>
+         
+       
+         <div class="col s12 m3">
+         <img class="materialboxed" data-caption="A picture of students in classroom." width="280" src="/images/shasha2.jpg">
+        </div>
+
+         <div class="col s12 m2">
+         <img class="materialboxed" data-caption="A picture of Students and Teachers after An event." width="280" src="/images/shasha3.jpg">
+        </div>
+      </div>
+      
+      </div>
+
+
+     <div class="row">
+      {% for event in events %}
+        <div class="col s12 m3">
+  <div class="card">
+    <div class="card-image ">
+      <img class="materialboxed" data-caption="GALLERY IMAGE" src="/utils/{{ event.galleryImage|e }}">
+    </div>
+    <div class="card-content">
+      <span class="card-title  grey-text text-darken-4">{{ event.imageDescription|e }}</span>
+    </div>
+    <div class="card-reveal">
+     
+      <p>{{ event.imageDescription|e }}.</p>
+    </div>
+  </div>
+        </div>
+           {% endfor %}
+      </div>
+
+        <script type="text/javascript">
+
+
+
+
+
+
+        	 $('.carousel.carousel-slider').carousel({fullWidth: true});
+        	  $('.carousel.carousel-slider').carousel({fullWidth: true});
+              $(document).ready(function(){
+    $('.materialboxed').materialbox();
+  });
+
+      
+        	  // Next slide
+
+        </script>
+        {%endblock%}
+
+
+
+  

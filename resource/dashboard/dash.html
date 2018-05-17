@@ -1,0 +1,134 @@
+  <!DOCTYPE html>
+<html>
+<head>
+	<title>{{title}}</title>
+</head>
+{%block stylesheet%}
+  <link href="https://fonts.googleapis.com/css?family=Nova Flat" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/css/materialize.css">
+   <link rel="stylesheet" href="/css/animate.css" />
+   <link rel="stylesheet" href="/css/abc.css" />
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/materialize.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<style type="text/css">
+		nav{
+			background: black;
+			color: white;
+		}
+    span,h5{
+       color:#00bebe;
+    }
+		body{
+			background:#313136;
+
+		}
+    fieldset{
+      margin-bottom: 10%;
+      margin-top: 5%;
+    }
+    .collapsible-header{
+      background: black;
+    }
+	</style>
+  {%endblock%}
+<body>
+	<div class="card-panel hoverable" style="background: black; color: white;">
+  <nav>
+    <div class="nav-wrapper" >
+    	<div >
+      <a href="/" style="float:right;" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Logout"><i style="color:#00bebe;" class="fa fa-lock fa-4x"></i></a>
+     
+      <a href="#"  class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="WebMaster" > <i style="color:#00bebe;"class="fa fa-user fa-4x"></i></a>
+       </div>
+      
+  	</div>
+  </nav>
+  </div>
+    <!-- Navbar goes here -->
+
+    <!-- Page Layout here -->
+
+    {%block main%}
+<fieldset style="background: black;margin-bottom: 5%;"><legend></legend>
+        {%block leftside%}
+   <div class="row">
+    <h1 style="color: #00bebe; text-align: center;"  class="animated zoomIn"><strong>ADMIN PANEL <h3><strong>(Total Number of visitors : {{ count }})</strong></h3></strong></h1>
+ <div  class="col s12 m3  ">
+        <div class="card #ede7f6 deep-purple black" style="height:auto; width: auto;">
+            <div class="tooltipped" data-position="top" data-delay="50" data-tooltip="OPERATION">
+            <div class="card-content white-text">
+             
+              <span class="card-title">OPERATIONS</span>
+              <ul>
+                   <a href="/adminPanel"><li></i>Dashboard</li></a>
+                   <a href="/adminPanel/administration"><li></i>Administration</li></a>
+                   <a href="/adminPanel/academices"><li></i>Academics</li></a>
+                   <a href="/adminPanel/facilities"><li></i>Facilities</li></a>
+                   <a href="/adminPanel/manageGallery"><li></i>Gallery</li></a>
+                  <a href="/adminPanel/Notification"><li></i> Notification</li></a>
+                  <a href="/adminPanel/studentAchievement"><li></i>Students' Achievement</li></a>
+                  <a href="/adminPanel/teacherAchievement"><li></i>Teachers' Achievement</li></a>
+                  </ul>
+            </div>
+          </div>
+        </div>
+        </div>
+         {%endblock%} <!-- left side  block end-->
+         {%block rightside%}
+        <div class="col s12 m9" >
+  <ul class="collapsible popout" data-collapsible="accordion" style="color: #00bebe;;">
+    <span><h3 class="animated zoomIn"><strong>GUDIE LINES TO MANAGE ADMIN PANEL</strong></h3></span>
+        <li>
+      <div class="collapsible-header"><i class=" material-icons">book</i>Administration</div>
+      <div class="collapsible-body"><span>Manage Principal's Details , Governing Body , Senior Tutor , Public Information Officer , Staff Advisors and Administrative Staff here.</span></div>
+    </li>
+        <li>
+      <div class="collapsible-header"><i class=" material-icons">book</i>Academics</div>
+      <div class="collapsible-body"><span>Manage Syllabi , Time Table , Prize and Awards here.</span></div>
+    </li>
+        <li>
+      <div class="collapsible-header"><i class=" material-icons">book</i>Facilities</div>
+      <div class="collapsible-body"><span>Manage Library , Sports , Residence , Medical and Chapel details here. </span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class=" material-icons">book</i>Gallery</div>
+      <div class="collapsible-body"><span>Images of School and the events organised in school. </span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">directions_run</i>Notification</div>
+      <div class="collapsible-body"><span> Update Important notifications from here , Notifications will be displayed on home page. </span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">home</i>Students' Achievement</div>
+      <div class="collapsible-body"><span>Student achievement has become a hot topic in education today, especially with increased accountability for classroom teachers. The ultimate goal for any teacher is to improve the ability level and prepare students for adulthood. Defining student achievement and factors that impact progress is critical.</span></div>
+    </li>
+        <li>
+      <div  class="collapsible-header"><i class="material-icons">control_point</i>Teachers' Achievement</div>
+      <div class="collapsible-body"><span>As a teacher at Achievement First, you’ll be a champion who believes all students are capable of greatness and achievement far beyond what society has been conditioned to accept. You will be a demander of excellence for yourself and your students, encouraging and accepting nothing less than students’ best and most thoughtful work. </span></div>
+    </li>
+  </ul>
+</div>
+{%endblock%} <!-- right side  block end-->
+
+</fieldset>
+{%endblock%}
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off" style="height: 250px;">
+  <a href="#" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To The Top</a>
+  <div class="w3-xlarge  w3-section">
+    <i class="fa fa-facebook-official fa-2x  w3-hover-opacity"></i>
+  <i class="fa fa-snapchat fa-2x w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p fa-2x  w3-hover-opacity"></i>
+    <i class="fa fa-twitter fa-2x  w3-hover-opacity"></i>
+    <i class="fa fa-linkedin fa-2x  w3-hover-opacity"></i>
+     <i class="fa fa-instagram  fa-2x  w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="https://www.facebook.com/dumonish?ref=br_rs" title="Mohd Monish" target="_blank" class="w3-hover-text-red">Mohd Monish</a></p>
+</footer>
+
+</body>
+</html>

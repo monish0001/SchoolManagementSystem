@@ -1,0 +1,105 @@
+{% extends '/dashboard/administrationdash.html' %}
+{%block header%} <h3 style="color: #00bebe; text-align: center;"  class="animated zoomIn"><strong>Manage Staff Advisors</strong></h3>{%endblock%}
+{%block rightside%}
+<div class="col s12 m9" >
+ 
+          <div class="card #e8eaf6 indigo black" style="height:auto;width: auto;">
+            <div class="card-content white-text">
+              <H2 class="animated zoomIn"><strong>Add New Staff Advisors</strong></H2>
+
+              
+           
+<div class="row   ">
+    <form class="col s12  " method="POST" action="/utils/request.php"  onsubmit=" return validate()">
+          <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="icon_prefix" type="text" name="staffName" id="staffName" class="validate">
+          <label for="icon_prefix"> Name</label>
+        </div>
+      </div> 
+          <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">home</i>
+          <input id="icon_prefix" type="text" name="staffSocieties" id="staffSocieties" class="validate">
+          <label for="icon_prefix">Societies</label>
+        </div>
+      </div> 
+     <div  style="text-align: center;">
+  <button  class="btn waves-effect waves-light" type="submit" name="staffadvisors">Submit 
+      <i  class="material-icons right">send</i>
+    </button></div>
+</form>
+
+  </div>
+ 
+  </div>
+ </div>
+</div>
+</div>
+
+
+
+<div align="center" class="card-panel teal black" style="color: white; margin-top: 10%; margin-bottom:1%;"><br>
+  <h2  class="animated zoomIn"><strong>Show Staff Advisors Details</strong></h2>
+ <a onclick="toggle_div_fun('sectiontohide');" class="btn waves-effect waves-teal">Show/Hide</a>
+<br /><br />
+<div id="sectiontohide" style="display: none;">
+<div class="animated zoomIn" >
+<div id="striped" class="section scrollspy">
+  <div class="row">
+    <div class="col s12">
+      <p>Here You Can Delete Any Staff Advisors</p><br><br>
+            <table class="responsive-table" style="color: white;">
+                {% for event in events %}
+              <thead>
+                <tr>
+              <th> Name:</th>
+              <th>Address:</th>
+              <th>Delete</th>
+
+          </tr>
+        </thead>
+       
+              <tbody>
+                <tr>
+                  <td>{{ event.staffName|e }}</td>
+                  <td>{{ event.staffSocieties|e }}</td>
+                   <td><a href='/adminPanel/administration/staffadvisor/deletestaffadvisor?id={{ event.id|e }}'><i class="medium material-icons">delete_forever</i></a></td>
+              </tr>
+              </tbody>
+                {% endfor %}
+            </table>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script type="text/javascript">
+  
+        function toggle_div_fun(id) {
+        var divelement = document.getElementById(id);
+
+       if(divelement.style.display == 'none')
+          divelement.style.display = 'block';
+       else
+          divelement.style.display = 'none';
+
+    }
+              function validate()
+              {  var i=document.getElementsByTagName("input");
+              if (i[0].value.length==0||i[1].value.length==0){
+                  Materialize.toast('Invalid Submission', 3000 , 'rounded')
+                return false;
+              }else{
+                return true;
+              }
+            }
+
+</script>
+
+
+
+
+{%endblock%}

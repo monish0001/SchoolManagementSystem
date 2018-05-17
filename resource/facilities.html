@@ -1,0 +1,67 @@
+{% extends 'home.html' %}
+
+
+{%block main%}
+
+      <fieldset style="background: black;margin-bottom: 5%;"><legend></legend>
+        {%block leftside%}
+
+   <div class="row">
+   {%block header%} <h1 style="color: #00bebe; text-align: center;"  class="animated zoomIn"><strong>FACILITIES</strong></h1>{%endblock%}
+ <div  class="col s12 m3  ">
+        <div class="card #ede7f6 deep-purple black" style="height:auto; width: auto;">
+            <div class="tooltipped" data-position="top" data-delay="50" data-tooltip="OPERATION">
+            <div class="card-content white-text">
+              <span class="card-title" style="color: #00bebe;">OPERATIONS</span>
+              <ul>
+                  <li><a href="/facilities/library">Library</a></li>
+                  <li><a href="/facilities/sports">Sports</a></li>
+                  
+                  <li><a href="/facilities/medical">Medical</a></li>
+              
+                  <li><a href="/facilities/cafitArea">Cafeteria</a></li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+        </div>
+        {%endblock%}
+
+        {%block rightside%}
+        <style type="text/css">
+          .collapsible-header{
+            background: black;
+          }
+        </style>
+        <div class="col s12 m9" style="margin-bottom: 10%;" >
+             
+  <ul class="collapsible popout" data-collapsible="accordion" style="color: #00bebe;;">
+    <li>
+      <div  class="collapsible-header"><i class=" material-icons">book</i>Library</div>
+      <div class="collapsible-body"><span>The goal of the school library media center is to ensure that all members of the school community have equitable access "to books and reading, to information, and to information technology.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">directions_run</i>Sports</div>
+      <div class="collapsible-body"><span>Sports in a major part of the life here at our School. The school boasts of modern facilities in football, hockey, basketball, volleyball, tennis, badminton and many other sports. Students are trained weekly by notable coaches in these sporting activities. </span></div>
+    </li>
+        <li>
+      <div  class="collapsible-header"><i class="material-icons">control_point</i>Medical</div>
+      <div class="collapsible-body"><span>Our School places high importance on the  health and safety of its staff and students. Not only is this important for the general well-being of each individual child, but children who are healthy and happy are likely to derive maximum benefit from the academic and pastoral programmes offered by the school.</span></div>
+    </li>
+        
+        <li>
+      <div  class="collapsible-header"><i class="material-icons">sentiment_very_satisfied</i>Cafeteria</div>
+      <div class="collapsible-body"><span>A cafeteria is a type of food service location in which there is little or no waiting staff table service.</span></div>
+    </li>
+  </ul>
+        
+       
+  </div>
+  {%endblock%}
+ </fieldset>
+{%endblock%}
+
+
+
+
+  

@@ -1,0 +1,24 @@
+{% extends '/dashboard/dash.html' %}
+{%block leftside%}
+<div class="row">
+   {%block header%} <h3 style="color: #00bebe; text-align: center;"  class="animated zoomIn"><strong>Manage facilities</strong></h3>{%endblock%}
+ <div  class="col s12 m3  ">
+        <div class="card #ede7f6 deep-purple black" style="height:auto; width: auto;">
+            <div class="tooltipped" data-position="top" data-delay="50" data-tooltip="OPERATION">
+            <div class="card-content white-text">
+              <span class="card-title" style="  color: #00bebe;">OPERATIONS</span>
+              <ul>
+              	<a href="/adminPanel"><li><i class="fa fa-tv"></i>Dashboard</li></a>
+                  <li><a href="/adminPanel/facilities/library">Library</a></li>
+                  <li><a href="/adminPanel/facilities/sports">Sports</a></li>
+                  <li><a href="/adminPanel/facilities/residence">Residence</a></li>
+                  <li><a href="/adminPanel/facilities/medical">Medical</a></li>
+                  <li><a href="/adminPanel/facilities/cafitArea">Cafeteria</a></li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+        </div>
+{%endblock%}
+{%block rightside%}
+{%endblock%}

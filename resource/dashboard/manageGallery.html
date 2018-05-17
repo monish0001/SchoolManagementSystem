@@ -1,0 +1,130 @@
+{% extends 'dashboard/dash.html' %}
+{%block leftside%}  <!--start leftside block-->
+<style type="text/css">
+  .striped{
+    background:;
+  }
+   input,textarea,h2,th{
+    color: #00bebe;
+  }
+</style>
+<div class="row">
+ <div  class="col s12 m3  ">
+        <div class="card #ede7f6 deep-purple black" style="height:auto; width: auto;">
+            <div class="tooltipped" data-position="top" data-delay="50" data-tooltip="OPERATION">
+            <div class="card-content white-text">
+              <span class="card-title" style="  color: #00bebe;">OPERATIONS</span>
+              <ul>
+                  <a href="/adminPanel"><li><i class="fa fa-tv"></i>Dashboard</li></a>
+                  <a href="/adminPanel/addNotification"><li></li></a>
+                  </ul>
+            </div>
+          </div>
+        </div>
+        </div>
+{%endblock%}
+{%block rightside%} <!--start leftside block-->
+
+<div class="col s12 m9" >
+ 
+          <div class="card #e8eaf6 indigo black" style="height:auto;width: auto;">
+            <div class="card-content white-text">
+              <H2 class="animated zoomIn"><strong>UPLOAD GALLERY IMAGE</strong></H2>
+
+              
+           
+<div class="row   ">
+    <form class="col s12  " method="POST" action="/utils/request.php" enctype="multipart/form-data" onsubmit=" return validate()">
+        <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">mode_edit</i>
+          <textarea id="icon_prefix2" name="imageDescription" class="materialize-textarea"></textarea>
+          <label for="icon_prefix2">Image Description</label>
+      </div>
+  </div>
+  <div class="file-field input-field">
+      <i class="material-icons prefix">image</i>
+      <div class="btn">
+        <span>Image File</span>
+        <input type="file" name="galleryImage">
+      </div>
+      <div class="file-path-wrapper">
+         <input class="file-path validate" type="text" placeholder="Upload Image" name="galleryImage">
+        
+      </div>
+    </div>
+     <div  style="text-align: center;">
+  <button  class="btn waves-effect waves-light" type="submit" name="addgallaryImage">Submit 
+      <i  class="material-icons right">send</i>
+    </button></div>
+</form>
+
+  </div>
+ 
+  </div>
+ </div>
+</div>
+</div>
+
+
+
+<div align="center" class="card-panel teal black" style="color: white; margin-top: 10%; margin-bottom:1%;"><br>
+ <a onclick="toggle_div_fun('sectiontohide');" class="btn waves-effect waves-teal">Show/Hide</a>
+<br /><br />
+<div id="sectiontohide" style="display: none;">
+<div class="animated zoomIn" >
+
+<div id="striped" class="section scrollspy">
+        <h2  class="animated zoomIn"><strong>SHOW ALL GALLERY IMAGES</strong></h2>
+        <div class="row">
+          <div class="col s12">
+            <p>Here You Can Delete Any Image</p><br><br>
+            <table class="responsive-table">
+                {% for event in events %}
+              <thead>
+                <tr>
+              <th>image Description</th>
+              <th>Image</th>
+              <th>Delete</th>
+
+          </tr>
+        </thead>
+       
+              <tbody>
+                <tr>
+                  <td>{{ event.imageDescription|e }}</td>
+                   <td ><img style="height: 50px;width: 50px;" src="/utils/{{ event.galleryImage|e }}"   class="materialboxed"></img></td>
+                   <td><a href='/adminPanel/manageGallery/deletegalleryImage?id={{ event.id|e }}'><i class="medium material-icons">delete_forever</i></a></td>
+              </tr>
+              </tbody>
+                {% endfor %}
+            </table>
+          </div>
+        </div>
+      </div>
+</div></div>
+<script type="text/javascript">
+  
+        function toggle_div_fun(id) {
+        var divelement = document.getElementById(id);
+
+       if(divelement.style.display == 'none')
+          divelement.style.display = 'block';
+       else
+          divelement.style.display = 'none';
+
+    }
+              function validate()
+              {  var i=document.getElementsByTagName("input");
+              if (i[0].value.length==0||i[1].value.length==0){
+                  Materialize.toast('Invalid Submission', 3000 , 'rounded')
+                return false;
+              }else{
+                return true;
+              }
+            }
+
+</script>
+
+{%endblock%}
+

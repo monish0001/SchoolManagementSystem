@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="/images/home1.jpg" />
+<title>{{title}}</title>
+  {%block stylesheet%}
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Nova Flat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/css/materialize.css">
+  <link rel="stylesheet" href="/css/animate.css" />
+  <link rel="stylesheet" href="/css/abc.css" />
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/materialize.js"></script>
+  
+<style type="text/css">
+    body{background: #212121;}
+
+  @media only screen and (max-width : 992px) {
+      header, main, footer {padding-left: 0;}
+     </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+{%endblock%}
+</head>
+<body >
+
+ <!---  <div id="particles-js"></div> end of particle -->
+<div class="card-panel hoverable" style="background: black;">
+<nav class="nav-extended" style="background:black;">
+    <div class="nav-wrapper" >
+    <!--  <a href="#" class="brand-logo"><img src="../images/logo.png" style="height: 60px; width: 200px; border-radius: 12px;"></a> -->
+      <a href="#" data-activates="mobile-demo" class="button-collapse">
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      	<li><a style="color: #00bebe;" class="tooltipped" data-position="left" data-delay="50" data-tooltip="HOME" href="/">HOME</a></li>
+      	<li><a  style="color: #00bebe;"class="tooltipped" data-position="top" data-delay="50" data-tooltip="ADMINISTRATION" href="/administration">ADMINISTRATION</a></li>
+        <li><a style="color: #00bebe;" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="ACADEMICS" href="/academices">ACADEMICS</a></li>
+        <li><a style="color: #00bebe;" class=" tooltipped" data-position="top" data-delay="50" data-tooltip="FACILITIES" href="/facilities">FACILITIES</a></li>
+        <li ><a style="color: #00bebe;"class=" tooltipped" data-position="bottom" data-delay="50" data-tooltip="GALLERY" href="/gallery">GALLERY</a></li>
+		</ul>
+       <ul id="slide-out" class="side-nav">
+    <li><div class="user-view">
+      <div class="background">
+        <img src="images/home1.jpg">
+      </div>
+      <a href="#"><img class="circle" src="images/logo.png"></a>
+      <a href="#"><span class="white-text name">ABC College</span></a>
+      <a href="#"><span class="white-text email">abc@gmail.com</span></a>
+    </div></li>
+    <li><a href="/"><i class="material-icons">home</i>Home</a></li>
+    <li><a href="/administration"><i class="material-icons">accessibility</i>ADMINISTRATION</a></li>
+    <li><a href="/academices"><i class="material-icons">book</i>ACADEMICS</a></li>
+    <li><a href="/facilities"><i class="material-icons">donut_small</i>FACILITIES</a></li>
+    <li><a href="/gallery"><i class="material-icons">image</i>GALLERY</a></li>
+  <li><a class="waves-effect" href="/contact"><i class="material-icons">contact_mail</i>CONTACT US</a></li>
+  <li> <a class="waves-effect waves-light modal-trigger" href="#modal2"> <i class="material-icons">map</i>MAP</a></li>
+  </ul>
+  <a href="/" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu </i></a>
+    </div>
+  </nav>
+</div>
+  <br>
+ {%block main%}
+
+<script type="text/javascript">
+ $(".button-collapse").sideNav();
+    $(document).ready(function(){
+      $('.slider').slider();
+    });
+         $(document).ready(function(){
+    $('.tooltipped').tooltip({delay: 50});
+  });
+</script>
+  <div class="slider" >
+    <ul class="slides">
+            <li>
+        <img src="images/a1.jpg"> <!-- random image -->
+        <div class="caption left-align">
+          <h3></h3>
+          <h5 class="light grey-text text-lighten-3"></h5>
+        </div>
+      </li>
+            <li>
+        <img src="images/scul2.jpeg"> <!-- random image -->
+        <div class="caption left-align">
+          <h3></h3>
+          <h5 class="light grey-text text-lighten-3"></h5>
+        </div>
+      </li>
+      <li>
+        <img src="images/scul3.jpeg"> <!-- random image -->
+        <div class="caption left-align">
+          <h3></h3>
+          <h5 class="light grey-text text-lighten-3"></h5>
+        </div>
+      </li>
+      <li>
+        <img src="images/scul4.jpeg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3></h3>
+          <h5 class="light grey-text text-lighten-3"></h5>
+        </div>
+      </li>
+      <li>
+        <img src="images/scul5.jpeg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3></h3>
+          <h5 class="light grey-text text-lighten-3"></h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <marquee><p style="color: white;">Something Important:-   Coming soon</p></marquee>
+  
+<div class="animated zoomIn" >
+ <div class="row" >
+ <div  class="col s12 m3 offset-m2 ">
+          
+          <div class="card #ede7f6 deep-purple lighten-5" style="height:auto;">
+            <div class="tooltipped" data-position="top" data-delay="50" data-tooltip="Notifications">
+            <div class="card-content black-text">
+              <span class="card-title">Notifications</span>
+              <ul>
+                 {% for event in events %}
+                 <li><a href='/showNotification?id={{ event.id|e }}'>{{ event. notificationTag|e }}</a></li>
+                    {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="col s12 m3" >
+          <div class="card #e8eaf6 indigo lighten-5" style="height:auto;">
+            <div class="tooltipped" data-position="top" data-delay="50" data-tooltip="Principal's Desk">
+            <div class="card-content black-text">
+              <div class="chip">
+    <img src="images/logo.png" alt="Contact Person" >
+   Ms. EMILIA CLARKE
+  </div>
+              <span class="card-title">Principal's Desk</span>
+              <p>DO NOT STOP UNTIL YOU FINISH YOUR WORK, AND ONCE YOU FINISH PLAN FOR THE NEXT BIG GOAL.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+        <div class="col s12 m3  " >
+          <div class="card #e3f2fd blue lighten-5" style="height:auto;">
+            <div class="tooltipped" data-position="top" data-delay="50" data-tooltip="Achievement">
+            <div class="card-content black-text">
+              <span class="card-title">Our Achievements</span>
+              <ul>
+                <li><a href="studentAchievement">Students' Achievements</a></li>
+                <li><a href="/teacherAchievement">Teachers' Achievements</a> </li>
+              </ul>
+              
+          </div>
+            </div>
+          </div>
+        </div>
+      </div></div>
+
+ <div class="row">
+
+        <div class="col s12 m2">
+           <div class="card" >
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="images/socites.jpg">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">SOCIETY<i class="material-icons right">lock_open</i></span>
+      
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">SOCIETY<i class="material-icons right">lock</i></span>
+      <ul>
+                  <li><a href="/go">let's Go</a></li>
+              </ul>
+    </div>
+  </div>
+
+        </div>
+        <div class="col s12 m2">
+                  <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="images/abc.jpg">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">CENTERS<i class="material-icons right">lock_open</i></span>
+      
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">CENTERS<i class="material-icons right">lock</i></span>
+      <ul>
+                  <li><a href="/anguage">Language</a></li>
+                  <li><a href="/physics">Physics</a></li>
+                  <li><a href="/maths">Maths</a></li>
+                  <li><a href="/chemistry">Chemistry</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+         <div class="col s12 m2">
+                   <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="images/iqsr.jpg">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">IQAC<i class="material-icons right">lock_open</i></span>
+      
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">IQAC<i class="material-icons right">lock</i></span>
+      <ul>
+                  <li><a href="/principal">Principal</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+              <div class="col s12 m2">
+                   <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="images/ecornor.jpg">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">ECorner<i class="material-icons right">lock_open</i></span>
+      
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">ECorner<i class="material-icons right">lock</i></span>
+      <ul>
+                  <li><a href="/principal">Principal</a></li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+                 <div class="col s12 m2">
+                   <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="images/isr.jpg">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">ISR<i class="material-icons right">lock_open</i></span>
+      
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">ISR<i class="material-icons right">lock</i></span>
+      <ul>
+                  <li><a href="/principal">Citizenship</a></li>
+                  <li><a href="/overning">Social Service</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+                <div class="col s12 m2">
+                   <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="images/vision.jpg">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Vision<i class="material-icons right">lock_open</i></span>
+      
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Vision 2030<i class="material-icons right">lock</i></span>
+      <ul>
+                  <li><a href="/vision">Our Vision</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+     
+   
+  {%endblock%}
+
+
+  {%block footer%}
+   <footer class="page-footer" style="background:black;">
+
+          
+          <div class="row" >
+            
+        <div  class="col s12 m3  ">
+          <div class="card #ede7f6 deep-purple lighten-5" style="height: 250px;">
+            <div class="card-content black-text">
+              <span class="card-title">Administration</span>
+              <ul>
+                  <li><a href="/administration/principal">Principal</a></li>
+                  <li><a href="/administration/governingbody">Governing Body</a></li>
+                  <li><a href="/administration/seniourtutor">Senior Tutor</a></li>
+                  <li><a href="/administration/publicInformationofficer">Public Information Officer</a></li>   
+                  <li><a href="/administration/staffadvisor">Staff Advisors</a></li>
+                  <li><a href="/administration/asministrativestaff">Administrative Staff</a></li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m3">
+          <div class="card #e8eaf6 indigo lighten-5 " style="height: 250px;">
+            <div class="card-content black-text">
+              <span class="card-title">Academics</span>
+              <ul>
+                  <li><a href="/academices/syllabi">Syllabi</a></li>
+                  <li><a href="/academices/timetable">Time Table</a></li>
+                  <li><a href="/academices/prizeandawards">Prize and Awards</a></li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m3	">
+          <div class="card #e3f2fd blue lighten-5" style="height: 250px;">
+            <div class="card-content black-text">
+              <span class="card-title">Facilities</span>
+              <ul>
+                  <li><a href="/facilities/library">Library</a></li>
+                  <li><a href="/facilities/sports">Sports</a></li>
+                  <li><a href="/facilities/residence">Residence</a></li>
+                  <li><a href="/facilities/medical">Medical</a></li>
+                   </ul>
+            </div>
+          </div>
+        </div>
+         <div class="col s12 m3	">
+          <div class="card #e3f2fd blue lighten-5" style="height: 250px;">
+            <div class="card-content black-text">
+               
+              
+              <span class="card-title">Contact Us</span>
+              
+              ABC School<br>
+              Uttam Nagar West, Delhi - 110007, India<br>
+              Phone: 200034<br>
+              <a  href="/contact"> <i class="material-icons">contact_mail</i>Queries</a><br>
+               <a class="waves-effect waves-light modal-trigger" href="#modal2"> <i class="material-icons">map</i>Map</a>
+           
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+     
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off" style="height: 250px;">
+  <a href="#" class="w3-button w3-light-grey">To The Top<i class="fa fa-arrow-up w3-margin-right"></i></a>
+  <div class="w3-xlarge  w3-section">
+    <i class="fa fa-facebook-official fa-2x  w3-hover-opacity"></i>
+  <i class="fa fa-snapchat fa-2x w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p fa-2x  w3-hover-opacity"></i>
+    <i class="fa fa-twitter fa-2x  w3-hover-opacity"></i>
+    <i class="fa fa-linkedin fa-2x  w3-hover-opacity"></i>
+     <i class="fa fa-instagram  fa-2x  w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="/" title="Monish " target="_blank" class="w3-hover-text-red"></a> Monish </p>
+</footer>
+  
+
+  <!-- Modal Structure -->
+  
+  <div id="modal2" class="modal bottom-sheet">
+    <div class="modal-content">
+     
+         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d56034.188208370695!2d77.03593793997453!3d28.625662918228443!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1ad327c996bf%3A0xc15d793aacb72697!2sDelhi+Public+School!5e0!3m2!1sen!2sin!4v1519454367022" width="600" height="450" frameborder="0" style="border:0; width: 100%; height:230px;" allowfullscreen></iframe>
+       <script type="text/javascript">
+           $(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+  });
+            $('#modal2').modal('open');
+
+  $('#modal2').modal('close');
+       </script>
+        
+
+      
+    </div>
+    
+  </div>
+
+   
+        </footer>
+
+
+
+
+         <div class="fixed-action-btn toolbar" >
+
+    <a class="btn btn-floating btn-large #00bebe pulse" >
+     <div class="tooltipped" data-position="top" data-delay="50" data-tooltip="MENU"> <i class="large material-icons">more</i></div>
+    </a>
+    <ul>
+ <li class="waves-effect waves-light"><a class="tooltipped" data-position="top" data-delay="50" data-tooltip="GALLERY" href="/gallery"><i class="material-icons">image</i>GALLERY</a></li>
+      <li class="waves-effect waves-light"><a class="tooltipped" data-position="top" data-delay="50" data-tooltip="CONTACT US" href="/contact"><i class="material-icons">contact_mail</i>CONTACT US</a></li>
+       <li class="waves-effect waves-light"><a class="tooltipped" data-position="top" data-delay="50" data-tooltip="FACILITIES" href="/facilities"><i class="material-icons">donut_small</i>FACILITIES</a></li>
+      <li class="waves-effect waves-light"><a class="tooltipped" data-position="top" data-delay="50" data-tooltip="ACADEMICS" href="/academices"><i class="material-icons">book</i>ACADEMICS</a></li>
+      <li class="waves-effect waves-light"><a class="tooltipped" data-position="top" data-delay="50" data-tooltip="ADMINISTRATION" href="/administration"><i class="material-icons">accessibility</i>ADMINISTRATION</a></li>
+      <li class="waves-effect waves-light"><a class="tooltipped" data-position="top" data-delay="50" data-tooltip="HOME" href="/"><i class="material-icons">home</i>HOME</a></li>
+    </ul>
+  </div>
+
+{%endblock%}
+</div>
+</body>
+</html>

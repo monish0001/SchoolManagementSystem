@@ -1,0 +1,292 @@
+{% extends 'home.html' %}
+
+{%block content%}{{parent()}} This is another Page{%endblock%}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+	<link rel="stylesheet" href="css/materialize.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/materialize.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<script type="text/javascript">
+
+    $(document).ready(function(){
+      $('.slider').slider();
+    });
+         $(document).ready(function(){
+    $('.tooltipped').tooltip({delay: 50});
+  });
+
+		
+	</script>
+	<style type="text/css">
+		body{
+			background: black;
+		}
+		span{
+			text-align: center;
+		}
+		ul li a{
+			background: none;
+		}
+	</style>
+</head>
+<body>
+	 
+<nav class="nav-extended" style="background:#424242;">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo"><img src="images/logo.png" style="height: 60px; width: 200px; border-radius: 12px;"></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      		 <li> <marquee id="scrolltext" behavior="scroll" diraction="right" loop="1"  scrollamount="1"><b style="color:white;">WELCOME IN ABC COLLEGE</b></marquee></li>
+      	<li><a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="HOME" href="#">HOME</a></li>
+      	<li><a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="ADMINISTRATION" href="#">ADMINISTRATION</a></li>
+        <li><a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="ACADEMICS" href="#">ACADEMICS</a></li>
+        <li><a class=" tooltipped" data-position="bottom" data-delay="50" data-tooltip="FACILITIES" href="resource/facilities.html">FACILITIES</a></li>
+        <li><a class=" tooltipped" data-position="bottom" data-delay="50" data-tooltip="GALLARY" href="resource/gallary.html">GALLARY</a></li>
+		</ul>
+      <ul class="side-nav" id="mobile-demo">
+          <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+      </ul>
+    </div>
+  </nav>
+  <br><br>
+<div class="slider" >
+    <ul class="slides">
+      <li>
+        <img src="images/home1.jpg"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Coming Form Left!</h3>
+          <h5 class="light grey-text text-lighten-3">Random text dkjghdlfkhjfk;gjdklghjskj.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="images/home2.jpg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>Coming Form Top!</h3>
+          <h5 class="light grey-text text-lighten-3">Random text dkjghdlfkhjfk;gjdklghjskj.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="images/home3.jpg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>Coming Form Top!</h3>
+          <h5 class="light grey-text text-lighten-3">Random text dkjghdlfkhjfk;gjdklghjskj.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="images/home4.jpg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>Coming Form Top!</h3>
+          <h5 class="light grey-text text-lighten-3">Random text dkjghdlfkhjfk;gjdklghjskj.</h5>
+        </div>
+      </li>
+         <li>
+        <img src="images/home5.jpg"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Coming Form Right!</h3>
+          <h5 class="light grey-text text-lighten-3">Random text dkjghdlfkhjfk;gjdklghjskj.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <marquee><p style="color: red;">Somthing Important:-   Coming soon</p></marquee>
+
+ <div class="row" >
+ 	
+        <div  class="col s12 m3 offset-m2 ">
+          <div class="card #ede7f6 deep-purple lighten-5">
+          	<div class="tooltipped" data-position="top" data-delay="50" data-tooltip="Notifications">
+            <div class="card-content black-text">
+              <span class="card-title">Notifications</span>
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="col s12 m3" >
+          <div class="card #e8eaf6 indigo lighten-5">
+          	<div class="tooltipped" data-position="top" data-delay="50" data-tooltip="Principal's Desk">
+            <div class="card-content black-text">
+            	<div class="chip">
+    <img src="images/logo.png" alt="Contact Person">
+   Dr. Sanjeet Kumar
+  </div>
+              <span class="card-title">Principal's Desk</span>
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.
+          </p>
+            </div>
+          </div>
+        </div>
+    </div>
+        <div class="col s12 m3	">
+          <div class="card #e3f2fd blue lighten-5">
+          	<div class="tooltipped" data-position="top" data-delay="50" data-tooltip="Alumni">
+            <div class="card-content black-text">
+              <span class="card-title">Alumni</span>
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <div class="row">
+        <div class="col s12 m2">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span  class="card-title">Societies</span>
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m2">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Centres</span>
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+          </div>
+        </div>
+         <div class="col s12 m2">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">ISR</span>
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+          </div>
+        </div>
+         <div class="col s12 m2">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span  class="card-title">IQAR</span>
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+          </div>
+        </div>
+         <div class="col s12 m2">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">E-Corner</span>
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+          </div>
+        </div>
+         <div class="col s12 m2">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Vision 2030</span>
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+   
+
+
+
+   <footer class="page-footer" style="background:#424242;">
+          
+          <div class="row" >
+        <div  class="col s12 m3  ">
+          <div class="card #ede7f6 deep-purple lighten-5">
+            <div class="card-content black-text">
+              <span class="card-title"><u>Administration</u></span>
+              <ul>
+              	<li><a href="#">Principal</a></li>
+              	<li><a href="#">Governing Body</a></li>
+              	<li><a href="#">Senior Tutor</a></li>
+              	<li><a href="#">Public Information Officer</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m3">
+          <div class="card #e8eaf6 indigo lighten-5">
+            <div class="card-content black-text">
+              <span class="card-title"><u>Acadimics</u></span>
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m3	">
+          <div class="card #e3f2fd blue lighten-5">
+            <div class="card-content black-text">
+              <span class="card-title"><u>Facilities</u></span>
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+          </div>
+        </div>
+         <div class="col s12 m3	">
+          <div class="card #e3f2fd blue lighten-5">
+            <div class="card-content black-text">
+              <span class="card-title"><u>Contact Us</u></span>
+              
+              <b>ABC College</b><br>
+              <b>University Of xyz,  North Campus, Delhi - 110007, India</b><br>
+              <b>Phone: 0000000000</b><br>
+              <b>abccollege@gmail.com</b>
+            </div>
+          </div>
+        </div>
+      </div>
+
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+
+       
+
+</body>
+</html>

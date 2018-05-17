@@ -1,0 +1,32 @@
+{% extends 'home.html' %}
+{%block main%}
+<style type="text/css">
+  strong{
+    color: #00bebe;
+  }
+</style>
+{% for event in events %}
+<div class="animated zoomIn">
+  <div class="row" >
+   <div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel white  lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <div class="materialboxed">
+              <img  src="/utils/{{ event.studentImage|e }}" class="circle responsive-img"> 
+              </div>
+            </div>
+            <div class="col s10">
+              <span class="black-text">
+                <p><strong >Student Name : </strong>{{ event.studentName|e }}</p>
+                <p><strong>Roll Number : </strong>{{ event.studentrollNumber|e }}</p>
+                <p><strong>Class : </strong>{{ event.studentClass|e }}</p>
+                <p><strong>Achievement Description </strong></p>{{ event.studentDescription|e }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div></div>
+{% endfor %}
+{%endblock%}

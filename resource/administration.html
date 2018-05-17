@@ -1,0 +1,83 @@
+{% extends 'home.html' %}
+
+
+{%block main%}
+
+      <fieldset style="background: black;margin-bottom: 5%;"><legend></legend>
+        {%block leftside%}
+
+   <div class="row">
+    {%block header%} <h3 style="color: #00bebe; text-align: center;"  class="animated zoomIn"><strong>ADMINISTRATION</strong></h3>{%endblock%}
+ <div  class="col s12 m3  ">
+        <div class="card #ede7f6 deep-purple black" style="height:auto; width: auto;">
+            <div class="tooltipped" data-position="top" data-delay="50" data-tooltip="OPERATION">
+            <div class="card-content white-text">
+              <span class="card-title" style="color: #00bebe;">OPERATIONS</span>
+              <ul>
+                  <li><a href="/administration/principal">Principal</a></li>
+                  <li><a href="/administration/governingbody">Governing Body</a></li>
+                  <li><a href="/administration/seniourtutor">Senior Tutor</a></li>
+                  <li><a href="/administration/publicInformationofficer">Public Information Officer</a></li>   
+                  <li><a href="/administration/staffadvisor">Staff Advisors</a></li>
+                  <li><a href="/administration/asministrativestaff">Administrative Staff</a></li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+        </div>
+        {%endblock%}
+
+        {%block rightside%}
+       
+        <style type="text/css">
+          .collapsible-header{
+            background: black;
+          }
+        </style>
+        <div class="col s12 m9" style="margin-bottom: 10%;" >
+             
+  <ul class="collapsible popout" data-collapsible="accordion" style="color: #00bebe;;">
+    <li>
+      <div  class="collapsible-header"><i class=" material-icons">book</i>Principal</div>
+      <div class="collapsible-body"><span>As Principal, it is my pleasure to welcome you to our school website. We thank you for taking the time to visit. We hope to provide you with some useful information.
+
+The website showcases the wealth of experiences we offer the children and gives them a wider audience for their wonderful work. We hope you enjoy your visit and return regularly to check out our latest news. </span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">directions_run</i>Governing Body</div>
+      <div class="collapsible-body"><span>The board's main function is to manage the school on behalf of the Patron, for the benefit of the students and to provide an appropriate education for each student at the school.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">home</i>Public Information Officer</div>
+      <div class="collapsible-body"><span>Public information officers (PIOs) are the communications coordinators or spokespersons.</span></div>
+    </li>
+        <li>
+      <div  class="collapsible-header"><i class="material-icons">control_point</i>Staff Advisor</div>
+      <div class="collapsible-body"><span>A STAFF ADVISOR SHOULD …
+• Be an experienced resource person who
+gives support to the student council and is
+genuinely concerned about its function
+and continued progress. 
+• Stimulate and develop a clear relationship
+between the student council and the
+school. </span></div>
+    </li>
+        <li>
+      <div  class="collapsible-header"><i class="material-icons">nature_people</i>Senior Tutor</div>
+      <div class="collapsible-body"><span>Senior Tutors are an integral part of this personal tutoring system – offering leadership and guidance on matters relating to student welfare, providing support to students and acting as a point of communication between academic units and central support services.</span></div>
+    </li>
+        <li>
+      <div  class="collapsible-header"><i class="material-icons">sentiment_very_satisfied</i>Administrative Staff</div>
+      <div class="collapsible-body"><span>Administrative staff take care of activities that are related to financial planning, record keeping & billing, personnel, physical distribution and logistics, within the school.</span></div>
+    </li>
+  </ul>
+        
+       
+  </div>
+  {%endblock%}
+ </fieldset>
+{%endblock%}
+
+
+
+

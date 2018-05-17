@@ -1,0 +1,27 @@
+{% extends '/dashboard/dash.html' %}
+
+{%block leftside%}
+<div class="row">
+  {%block header%} <h3 style="color: #00bebe; text-align: center;"  class="animated zoomIn"><strong>Manage Administration</strong></h3>{%endblock%}
+ <div  class="col s12 m3  ">
+        <div class="card #ede7f6 deep-purple black" style="height:auto; width: auto;">
+            <div class="tooltipped" data-position="top" data-delay="50" data-tooltip="OPERATION">
+            <div class="card-content white-text">
+              <span class="card-title" style="  color: #00bebe;">OPERATIONS</span>
+              <ul>
+              	<a href="/adminPanel"><li><i class="fa fa-tv"></i>Dashboard</li></a>
+                  <li><a href="/adminPanel/administration/principal">Principal</a></li>
+                  <li><a href="/adminPanel/administration/governingbody">Governing Body</a></li>
+                  <li><a href="/adminPanel/administration/seniourtutor">Senior Tutor</a></li>
+                  <li><a href="/adminPanel/administration/publicInformationofficer">Public Information Officer</a></li>   
+                  <li><a href="/adminPanel/administration/staffadvisor">Staff Advisors</a></li>
+                  <li><a href="/adminPanel/administration/asministrativestaff">Administrative Staff</a></li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+        </div>
+{%endblock%}
+{%block rightside%}
+<h1 style="color: white;">Here u can manage all the amd services:</h1>
+{%endblock%}

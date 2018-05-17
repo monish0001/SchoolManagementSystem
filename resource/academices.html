@@ -1,0 +1,61 @@
+{% extends 'home.html' %}
+
+{%block main%}
+
+      <fieldset style="background: black;margin-bottom: 5%;"><legend></legend>
+        {%block leftside%}
+
+   <div class="row">
+     {%block header%} <h1 style="color: #00bebe; text-align: center;"  class="animated zoomIn"><strong>ACADEMICS</strong></h1>{%endblock%}
+ <div  class="col s12 m3  ">
+        <div class="card #ede7f6 deep-purple black" style="height:auto; width: auto;">
+            <div class="tooltipped" data-position="top" data-delay="50" data-tooltip="OPERATION">
+            <div class="card-content white-text">
+              <span class="card-title" style="color: #00bebe;">OPERATIONS</span>
+              <ul>
+                 
+                  <li><a href="/academices/syllabi">Syllabi</a></li>
+                  <li><a href="/academices/timetable">Time Table</a></li>
+                  <li><a href="/academices/prizeandawards">Prize and Awards</a></li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+        </div>
+        {%endblock%}
+
+        {%block rightside%}
+        <style type="text/css">
+          .collapsible-header{
+            background: black;
+          }
+        </style>
+        <div class="col s12 m9" style="margin-bottom: 10%;" >
+             
+  <ul class="collapsible popout" data-collapsible="accordion" style="color: #00bebe;;">
+    
+    <li>
+      <div class="collapsible-header"><i class="material-icons">home</i>Syllabi</div>
+      <div class="collapsible-body"><span>A syllabus is an academic document that communicates course information and defines expectations and responsibilities.</span></div>
+    </li>
+        <li>
+      <div  class="collapsible-header"><i class="material-icons">control_point</i>Time Table</div>
+      <div class="collapsible-body"><span> A school timetable is a table for coordinating these four elements:
+
+Students , 
+Teachers , 
+Rooms , 
+Time slots (also called periods).</span></div>
+    </li>
+        <li>
+      <div  class="collapsible-header"><i class="material-icons">nature_people</i>Prize and Awards</div>
+      <div class="collapsible-body"><span>The Prize Distribution Ceremony was held to felicitate the Students who followed the School’s motto "In Pursuit of Excellence". </span></div>
+    </li>
+  </ul>
+        
+       
+  </div>
+  {%endblock%}
+ </fieldset>
+{%endblock%}
+

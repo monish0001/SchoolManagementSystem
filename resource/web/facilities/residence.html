@@ -1,0 +1,40 @@
+{% extends '/facilities.html' %}
+  {%block header%} <h1 style="color: #00bebe; text-align: center;"  class="animated zoomIn"><strong>Residence</strong></h1>{%endblock%}
+{%block rightside%}
+<script type="text/javascript">
+	  $(document).ready(function(){
+      $('.slider').slider();
+    });
+        
+</script>
+<div class="row">
+	<div class="col s12 m9">
+		 <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="/images/hostel1.jpg"> <!-- random image -->
+      </li>
+      <li>
+          <img src="/images/hostel2.jpg"> <!-- random image -->
+      </li>
+      <li>
+          <img src="/images/hostel3.jpg"> <!-- random image -->
+      </li>
+      <li>
+          <img  src="/images/hostel4.jpg"><!-- random image -->
+      </li>
+    </ul>
+  </div>
+          <div class="card black">
+            <div class="card-content white-text">
+              <span class="card-title"><h1 style="color: #00bebe; "><strong>About Hostel</strong></h1></span>
+              <p>The College accommodates around 200 undergraduate male students in its hostel. It has a common room,a multifaceted gym and arrangements for indoor and outdoor games. Dining facilities are managed on co-operative basis by a Mess Committee of resident students. Power back-up is now available 24 hours a day. Medical aid is provided at the World University Service Health Centre situated nearby. Wi Fi facility is available to all the students. Students needing hostel accommodation should apply separately on a prescribed form (available from the College Hostel Office) immediately after finalization of their admission to the College. Admission to the College does not guarantee admission to the Hostel. A separate Prospectus is available from the hostel office to guide you for this purpose.<br><br>
+			HOSTEL PROSPECTUS 2018<br>
+			Dr. Bijendra Singh	- Hostel Warden<br>
+			Dr. Manjit Singh Saggi	Hostel Deputy Warden.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+{%endblock%}
